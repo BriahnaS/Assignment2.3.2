@@ -8,10 +8,6 @@ Console.WriteLine();
 Console.WriteLine("Please enter your bill total: ");
 double total = Convert.ToDouble(Console.ReadLine());
 
-
-//Calling methods to calculate tip and add to total
-TipCalculation(total);
-
 // Declare variables
 double fifteen;
 double eighteen;
@@ -19,14 +15,16 @@ double twenty;
 double fifteenPer;
 double eighteenPer;
 double twentyPer;
-// Display total with tip
+
+//Calling methods to calculate tip 
+TipCalculation(total);
+
+// Add tip to total and display total with tip
 AddTip(fifteenPer, eighteenPer, twentyPer, total);
 
 
-
-
-
-
+// Declaring Methods
+// Method for tip calculation
 void TipCalculation(double total)
 {
     fifteen = 0.15;
@@ -45,10 +43,10 @@ void TipCalculation(double total)
     
 }
 
-
+//Method for adding selected tip
 void AddTip(double fifteenPer, double eighteenPer, double twentyPer, double total)
 {
-    Console.WriteLine("Please select your tip: ");
+    Console.WriteLine("Please make your selection: ");
     int tipSelection = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine();
     switch (tipSelection)
@@ -66,7 +64,7 @@ void AddTip(double fifteenPer, double eighteenPer, double twentyPer, double tota
             Console.WriteLine($"Your total with tip is: {grandTotal:C2}");
             break;
         case 4:
-            Console.WriteLine("Please select your tip amount: ");
+            Console.WriteLine("Please select your custom tip amount: ");
             double customTip = Convert.ToDouble(Console.ReadLine())/100;
             grandTotal = total + total*customTip;
             Console.WriteLine();
