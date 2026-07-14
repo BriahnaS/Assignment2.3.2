@@ -12,15 +12,15 @@ double total = Convert.ToDouble(Console.ReadLine());
 double fifteen;
 double eighteen;
 double twenty;
-double fifteenPer;
-double eighteenPer;
-double twentyPer;
+double tipFifteen;
+double tipEighteen;
+double tipTwenty;
 
 //Calling methods to calculate tip 
 TipCalculation(total);
 
 // Add tip to total and display total with tip
-AddTip(fifteenPer, eighteenPer, twentyPer, total);
+AddTip(tipFifteen, tipEighteen, tipTwenty, total);
 
 
 // Declaring Methods
@@ -28,16 +28,16 @@ AddTip(fifteenPer, eighteenPer, twentyPer, total);
 void TipCalculation(double total)
 {
     fifteen = 0.15;
-    fifteenPer = total * 0.15;
-    Console.WriteLine($"1. {fifteen:p0}: {fifteenPer:C2}");
+    tipFifteen = total * 0.15;
+    Console.WriteLine($"1. {fifteen:p0}: {tipFifteen:C2}");
 
     eighteen = 0.18;
-    eighteenPer = total * 0.18;
-    Console.WriteLine($"2. {eighteen:p0}: {eighteenPer:C2}");
+    tipEighteen = total * 0.18;
+    Console.WriteLine($"2. {eighteen:p0}: {tipEighteen:C2}");
 
     twenty = 0.2;
-    twentyPer = total * .20;
-    Console.WriteLine($"3. {twenty:p0}: {twentyPer:C2}");
+    tipTwenty = total * .20;
+    Console.WriteLine($"3. {twenty:p0}: {tipTwenty:C2}");
 
     Console.WriteLine("4. Other amount: ");
     
